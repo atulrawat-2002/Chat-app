@@ -8,7 +8,7 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
     const navigate = useNavigate()
 
     return (
-    <div className={`bg-[#8185B2]/10 h-full p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ? "max-md:hidden" : ""}`} >
+    <div className={`bg-[#8185B2]/10 h-[500px] p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ? "max-md:hidden" : ""}`} >
         <div className="pb-5  " >
             <div className="  flex justify-between items-center " >
                 <img src={assets.logo} alt="logo" className=" max-w-40 " />
@@ -21,9 +21,10 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
                     </div>
                 </div>
             </div>
-            <div>
+            {/* Search bar starts here */}
+            <div className="rounded-full bg-[#282142] flex items-center gap-2 py-3 px-4 mt-5" >
                 <img src={assets.search_icon} alt="search" className="w-3 " />
-                <input type="text" placeholder="hey!" className=" bg-transparent border-none outline-none text-white text-xs flex-1 placeholder-[#c8c8c8] " />
+                <input type="text" placeholder="Search User..." className=" bg-transparent border-none outline-none text-white text-xs flex-1 placeholder-[#c8c8c8] " />
             </div>
         </div>
     </div>
